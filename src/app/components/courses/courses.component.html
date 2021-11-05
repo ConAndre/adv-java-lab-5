@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <li class="list-group-item active">Courses</li>
+  <li class="list-group-item" (click)="selectCourse(course)"
+      [ngClass]="{'active': course.id === selectedCourse.id}" *ngFor="let course of courses">
+    {{course.title}}
+  </li>
+  {{selectedCourse.modules.length}}
+</ul>
